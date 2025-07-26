@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CapsuleScaling : MonoBehaviour
+public class Scaler : MonoBehaviour
 {
     [SerializeField] private Vector3 _maximumScale = new Vector3(5, 5, 5);
     [SerializeField] private float _speed = 3;
@@ -30,6 +30,6 @@ public class CapsuleScaling : MonoBehaviour
             _scaleDirection = Vector3.one;
         }
 
-        transform.localScale += _scaleDirection * this._speed * Time.deltaTime;
+        transform.localScale += _scaleDirection * _speed * Time.deltaTime;
     }
 }
